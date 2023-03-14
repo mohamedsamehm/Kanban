@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Main css -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <!-- Font-awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <title>Kanban Board</title>
+</head>
+
+<body>
+  <h1>Kanban Board</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col" data-type="notStarted">
+        <h2 class="title">Not Started</h2>
+        <div class="tasks-wrapper">
+          <div class="tasks"></div>
+          <button class="add-task">+ Add</button>
+        </div>
+      </div>
+      <div class="col" data-type="inProgress">
+        <h2 class="title">In Progress</h2>
+        <div class="tasks-wrapper">
+          <div class="tasks"></div>
+          <button class="add-task">+ Add</button>
+        </div>
+      </div>
+      <div class="col" data-type="completed">
+        <h2 class="title">Completed</h2>
+        <div class="tasks-wrapper">
+          <div class="tasks"></div>
+          <button class="add-task">+ Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Main Js -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

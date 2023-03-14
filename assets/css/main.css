@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #009083;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+h1 {
+  text-align: center;
+  margin: 80px auto 50px auto;
+  font-size: 2.5rem;
+}
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+@media (max-width: 768px) {
+  .row {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 48px;
+  }
+}
+.container {
+  max-width: 1200px;
+  padding: 16px;
+  margin: 60px auto;
+}
+.col .title {
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+.tasks .task {
+  padding: 12px 0;
+  background-color: #fff;
+  padding: 12px 16px;
+  border-radius: 6px;
+  cursor: grab;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  user-select: none;
+  transition: opacity 200ms ease;
+}
+.tasks .task > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tasks .task span,
+.tasks .task input {
+  color: #22001e;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  font-family: inherit;
+  padding: 0;
+}
+.tasks .task input {
+  border: 0;
+  outline: none;
+  width: 100%;
+  max-width: calc(100% - 45px);
+}
+.tasks .task button {
+  cursor: pointer;
+  visibility: hidden;
+  border: 0;
+  background-color: transparent;
+}
+.tasks .task button i {
+  font-size: 15px;
+}
+.tasks .task button.edit-task {
+  color: #027bff;
+}
+.tasks .task button.delete-task {
+  color: #db3546;
+}
+.tasks .task:hover button {
+  visibility: visible;
+}
+.add-task {
+  background-color: #008379;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 12px 0;
+  color: inherit;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+.add-task:hover {
+  background-color: #00665f;
+}
+.dragging {
+  transition: opacity 0.5s ease;
+  opacity: 0.5;
+}
