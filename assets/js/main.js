@@ -126,7 +126,9 @@
         let span = document.createElement("span");
         span.innerHTML = input.value;
         let title =
-          this.parentNode.parentNode.parentNode.getAttribute("data-type");
+          this.parentNode.parentNode.parentNode.parentNode.getAttribute(
+            "data-type"
+          );
         tasks[title][tasks[title].indexOf(oldVal)] = input.value;
         localStorage.setItem("tasks", JSON.stringify(tasks));
         input.parentNode.prepend(span);
@@ -158,7 +160,9 @@
 
   document.querySelectorAll(".task").forEach((task) => {
     task.addEventListener("dragstart", dragStart);
+    task.addEventListener("touchstart", dragStart);
     task.addEventListener("dragend", dragEnd);
+    task.addEventListener("touchend", dragEnd);
   });
 
   function dragStart(e) {
@@ -197,6 +201,7 @@
   const tasksParent = document.querySelectorAll(".tasks-wrapper");
 
   tasksParent.forEach((tasks) => {
+    tasks.addEventListener("touchmove", dragOver);
     tasks.addEventListener("dragover", dragOver);
   });
 
