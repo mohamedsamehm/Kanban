@@ -160,9 +160,9 @@
 
   document.querySelectorAll(".task").forEach((task) => {
     task.addEventListener("dragstart", dragStart);
-    task.addEventListener("touchstart", dragStart);
+    // task.addEventListener("touchstart", dragStart);
     task.addEventListener("dragend", dragEnd);
-    task.addEventListener("touchend", dragEnd);
+    // task.addEventListener("touchend", dragEnd);
   });
 
   function dragStart(e) {
@@ -201,7 +201,7 @@
   const tasksParent = document.querySelectorAll(".tasks-wrapper");
 
   tasksParent.forEach((tasks) => {
-    tasks.addEventListener("touchmove", dragOver);
+    // tasks.addEventListener("touchmove", dragOver);
     tasks.addEventListener("dragover", dragOver);
   });
 
